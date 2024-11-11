@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Search</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="username" placeholder="Enter GitHub username..." 
+                   onkeypress="if(event.key === 'Enter') searchUser()">
+            <button onclick="searchUser()">Search</button>
+        </div>
+
+        <div class="loader" id="loader"></div>
+        <div class="error-message" id="error"></div>
+
+        <div class="profile-card" id="profile">
+            <div class="profile-header">
+                <img class="avatar" id="avatar" src="" alt="Profile Avatar">
+                <div class="profile-info">
+                    <h2 id="name"></h2>
+                    <p id="login"></p>
+                    <p id="bio"></p>
+                    <p id="location"></p>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Repositories</h3>
+                    <p id="repos"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Followers</h3>
+                    <p id="followers"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Following</h3>
+                    <p id="following"></p>
+                </div>
+            </div>
+
+            <button id="profile-link" onclick="openProfile()">View on GitHub</button>
+        </div>
+    </div>
+
+   <script src="main.js"></script>
+</body>
+</html>
