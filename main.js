@@ -12,9 +12,9 @@ async function searchUser() {
         return;
     }
 
-    loader.style.display = 'block';
-    error.style.display = 'none';
-    profile.style.display = 'none';
+     loader.style.display = 'block';
+     error.style.display = 'none';
+     profile.style.display = 'none';
 
     try {
         const response = await fetch(`https://api.github.com/users/${username}`);
